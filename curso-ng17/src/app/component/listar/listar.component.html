@@ -1,0 +1,31 @@
+<mat-card>
+  <div class=""list-container>
+    <mat-table [dataSource]="cursos" class="mat-elevation-z8">
+            <!-- Código Column -->
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+              <mat-cell *matCellDef="let curso"> {{ curso.id }} </mat-cell>
+            </ng-container>
+
+                  <!-- Código Column -->
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let curso"> {{ curso.nombre }} </mat-cell>
+      </ng-container>
+
+      <!-- Código Column -->
+        <ng-container matColumnDef="creditos">
+         <mat-header-cell *matHeaderCellDef> Créditos </mat-header-cell>
+          <mat-cell *matCellDef="let curso"> {{ curso.creditos }} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+
+    </mat-table>
+  </div>
+
+
+</mat-card>
+
