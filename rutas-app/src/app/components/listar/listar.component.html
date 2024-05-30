@@ -1,0 +1,41 @@
+<mat-card>
+<div class="list-container">
+  <mat-table [dataSource]="rutas" class="mat-elevation-z8">
+    <!-- Código Column -->
+    <ng-container matColumnDef="codigo">
+      <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+      <mat-cell *matCellDef="let ruta"> {{ ruta.codigo }} </mat-cell>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+      <mat-cell *matCellDef="let ruta"> {{ ruta.nombre }} </mat-cell>
+    </ng-container>
+
+    <!-- Tipo Column -->
+    <ng-container matColumnDef="tipo">
+      <mat-header-cell *matHeaderCellDef> Tipo </mat-header-cell>
+      <mat-cell *matCellDef="let ruta"> {{ ruta.tipo }} </mat-cell>
+    </ng-container>
+
+    <!-- Fecha de Creación Column -->
+    <ng-container matColumnDef="fechaCreacion">
+      <mat-header-cell *matHeaderCellDef> Fecha de Creación </mat-header-cell>
+      <mat-cell *matCellDef="let ruta"> {{ ruta.fechaCreacion}} </mat-cell>
+    </ng-container>
+
+    <!-- Extensión Column -->
+    <ng-container matColumnDef="extension">
+      <mat-header-cell *matHeaderCellDef> Extensión </mat-header-cell>
+      <mat-cell *matCellDef="let ruta"> {{ ruta.extension }} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
+</div>
+</mat-card>

@@ -1,0 +1,25 @@
+{
+  "rutas": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "fechaCreacion": "2024-05-01",
+      "tipo": "caminar",
+      "extension": 1500
+    },
+    {
+      "id": 2,
+      "nombre": "Jose",
+      "fechaCreacion": "2024-05-01",
+      "tipo": "caminar",
+      "extension": 15000
+    },
+    {
+      "id": 3,
+      "nombre": "Maria",
+      "fechaCreacion": "2024-05-01",
+      "tipo": "correr",
+      "extension": 2550
+    }
+  ]
+}

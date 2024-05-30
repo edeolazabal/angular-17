@@ -1,0 +1,7 @@
+.mat-toolbar {
+  background-color: yellow !important;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
