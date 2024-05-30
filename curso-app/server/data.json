@@ -1,0 +1,34 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nombre": "AAW",
+      "creditos": 4
+    },
+    {
+      "id": 2,
+      "nombre": "BD1",
+      "creditos": 3
+    },
+    {
+      "nombre": "IA1",
+      "creditos": 2,
+      "id": 3
+    },
+    {
+      "nombre": "RRHH",
+      "creditos": 4,
+      "id": 4
+    },
+    {
+      "nombre": "PBI",
+      "creditos": 4,
+      "id": 5
+    },
+    {
+      "nombre": "PL1",
+      "creditos": 2,
+      "id": 6
+    }
+  ]
+}

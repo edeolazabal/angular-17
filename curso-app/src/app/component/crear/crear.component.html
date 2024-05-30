@@ -1,0 +1,84 @@
+<mat-card>
+  <h2>Nuevo Curso</h2>
+  
+<form [formGroup]="cursoForm" autocomplete="off">
+  <div class="curso-container">
+    <mat-form-field>
+      <input
+      matInput
+      placeholder="Curso"
+      formControlName="nombre"
+      required />
+    </mat-form-field>
+    <div
+    *ngIf="
+      cursoForm.get('nombre')?.hasError('required') &&
+      cursoForm.get('nombre')?.touched
+    "
+    style="margin-top: -20px"
+  >
+    <span class="mda-form-msg"> Este campo es obligatorio </span>
+  </div>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="number"
+        placeholder="Créditos"
+        formControlName="creditos"
+        required
+      />
+    </mat-form-field>
+    <div
+    *ngIf="
+      cursoForm.get('creditos')?.hasError('required') &&
+      cursoForm.get('creditos')?.touched
+    "
+    style="margin-top: -20px"
+  >
+    <span class="mda-form-msg"> Este campo es obligatorio </span>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Cursos</mat-label>
+    <select matNativeControl required>
+      <option value="AAW">Arquitectura de Aplicaciones Web</option>
+      <option value="BD2">Base de Datos 2</option>
+      <option value="AE1">Arquitectura Empresarial 1</option>
+      <option value="TP1">Taller de Programación 1</option>
+    </select>
+  </mat-form-field>
+
+</div>
+
+<div>
+  <button class="button"
+  mat-raised-button
+  color="primary"
+  [disabled]="cursoForm.invalid"
+  type="button"
+  style="margin-left: 10 px"
+  (click)="crearCurso()"
+>
+  Ok
+</button>
+
+<button class="button"
+mat-raised-button
+color="warn"
+type="button"
+trouterLink="/listar"
+>
+Cancel
+</button>
+
+</div>
+
+</form>
+
+</mat-card>
+
+
+
+
+
